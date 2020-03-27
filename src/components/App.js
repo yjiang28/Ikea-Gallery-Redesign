@@ -3,7 +3,7 @@ import AppBar from "./AppBar";
 import ItemPage from "./ItemPage";
 import RoomsPage from "./RoomsPage";
 import ItemsPage from "./ItemsPage";
-import "../styles/_layout.scss";
+import "../styles/layout.css";
 
 const App = ({ cart, fav, slide, page, item, store }) => {
   return (
