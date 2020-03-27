@@ -4,12 +4,17 @@ import PropTypes from "prop-types";
 import { AnchorMenu, Divider, FavItem, MenuItem } from "./";
 
 const FavMenu = forwardRef(({ className, fav, anchorEl, ...props }, ref) => {
+	const items = Object.keys(fav).reduce(
+		(acc, id) => (fav[id] ? [...acc, fav[id]] : acc),
+		[]
+	);
+
 	return (
 		<AnchorMenu anchorEl={anchorEl}>
-			{Object.keys(fav) > 0 ? (
-				Object.keys(fav).map(id => (
-					<Fragment key={id}>
-						<FavItem item={fav[id]} />
+			{items.length > 0 ? (
+				items.map(item => (
+					<Fragment key={item.id}>
+						<FavItem item={item} />
 						<Divider />
 					</Fragment>
 				))

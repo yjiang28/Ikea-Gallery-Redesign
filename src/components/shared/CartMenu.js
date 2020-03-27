@@ -6,7 +6,7 @@ import { AnchorMenu, CartItem, Divider, MenuItem } from "./";
 const CartMenu = forwardRef(({ className, cart, anchorEl, ...props }, ref) => {
 	return (
 		<AnchorMenu anchorEl={anchorEl}>
-			{Object.keys(cart) > 0 ? (
+			{Object.keys(cart).length > 0 ? (
 				Object.keys(cart).map(id => (
 					<Fragment key={id}>
 						<CartItem item={cart[id]} />

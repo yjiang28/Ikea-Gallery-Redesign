@@ -32,7 +32,7 @@ const reducers = (state = initialState, action) => {
 		case ADD_TO_FAV: {
 			const updatedState = { ...state },
 				{ id } = action.item;
-			if (updatedState.fav[id]) delete updatedState.fav[id];
+			if (updatedState.fav[id]) updatedState.fav[id] = null;
 			else {
 				updatedState.fav[id] = {
 					...action.item

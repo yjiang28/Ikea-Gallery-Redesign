@@ -16,6 +16,15 @@ const rooms = [
 		src:
 			"https://www.ikea.com/images/4-seat-lidhult-corner-sofa-in-dark-brown-leather-in-a-living-25ec4a87ce4bb639f803b29d5a4986dc.jpg?f=xxxl",
 		itemIds: [21, 22, 23, 24, 25]
+	},
+	{
+		id: 2,
+		name: "Unique",
+		alt: "A living room with a designer's touch",
+		description: "A living room with a designer's touch",
+		src:
+			"https://www.ikea.com/images/golden-brown-leather-landskrona-sofa-with-long-chaise-and-fo-13443229847bbc90fd1b632e8805c0a9.jpg?f=xxxl",
+		itemIds: [31, 32, 33, 34, 35]
 	}
 ];
 
@@ -162,8 +171,80 @@ const items = [
 		name: "Table lamp",
 		description: "gray",
 		price: 199.0
+	},
+	{
+		id: 31,
+		preview:
+			"https://www.ikea.com/ca/en/images/products/lampan-table-lamp__0879365_PE674068_S5.JPG?f=xl",
+		images: [
+			"https://www.ikea.com/ca/en/images/products/lampan-table-lamp__0879372_PE674069_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/lampan-table-lamp__0743229_PH158299_S5.JPG?f=xl"
+		],
+		brand: "MORABO",
+		name: "Table lamp",
+		description: 'brown, 11 " (29 cm)',
+		price: 8.99
+	},
+	{
+		id: 32,
+		preview:
+			"https://www.ikea.com/ca/en/images/products/glittrig-candlestick-set-of-3-ivory-gold-colour__0902886_PE685232_S5.JPG?f=xl",
+		images: [
+			"https://www.ikea.com/ca/en/images/products/glittrig-candlestick-set-of-3-ivory-gold-colour__0663508_PH153605_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/glittrig-candlestick-set-of-3-ivory-gold-colour__0686393_PH155558_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/glittrig-candlestick-set-of-3-ivory-gold-colour__0902883_PE685231_S5.JPG?f=xl"
+		],
+		brand: "GLITTRIG",
+		name: "Candlestick",
+		description: "set of 3, ivory, gold-colour",
+		price: 19.99
+	},
+	{
+		id: 33,
+		preview:
+			"https://www.ikea.com/ca/en/images/products/radviken-armchair-dark-brown-black__0837327_PE601023_S5.JPG?f=xl",
+		images: [
+			"https://www.ikea.com/ca/en/images/products/radviken-armchair-dark-brown-black__0325828_PE517686_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/radviken-armchair-dark-brown-black__0325825_PE517684_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/radviken-armchair-dark-brown-black__0325827_PE517685_S5.JPG?f=xl"
+		],
+		brand: "RÅDVIKEN",
+		name: "Armchair",
+		description: "dark brown, black",
+		price: 199.0
+	},
+	{
+		id: 34,
+		preview:
+			"https://www.ikea.com/ca/en/images/products/stockholm-nest-of-tables-set-of-2-walnut-veneer__0837170_PE601372_S5.JPG?f=xl",
+		images: [
+			"https://www.ikea.com/ca/en/images/products/stockholm-nest-of-tables-set-of-2-walnut-veneer__0258118_PE402030_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/stockholm-nest-of-tables-set-of-2-walnut-veneer__0258118_PE402030_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/stockholm-nest-of-tables-set-of-2-walnut-veneer__0837158_PE365379_S5.JPG?f=xl"
+		],
+		brand: "STOCKHOLM",
+		name: "Nesting tables",
+		description: "set of 2, walnut veneer",
+		price: 299.0
+	},
+
+	{
+		id: 35,
+		preview:
+			"https://www.ikea.com/images/closeup-of-stockholm-mirrors-deep-ledge-holding-small-perfum-a473667de2f3799fa726e81cd939274f.jpg?f=m",
+		images: [
+			"https://www.ikea.com/ca/en/images/products/stockholm-mirror-walnut-veneer__0906302_PE555467_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/stockholm-mirror-walnut-veneer__0906306_PE658294_S5.JPG?f=xl",
+			"https://www.ikea.com/ca/en/images/products/stockholm-mirror-walnut-veneer__0212204_PE362775_S5.JPG?f=xl"
+		],
+		brand: "STOCKHOLM",
+		name: "Mirror",
+		description: 'walnut veneer, 31 1/2 " (80 cm)',
+		price: 99.0
 	}
 ];
+
+const getRooms = () => rooms;
 
 const getItems = roomId => {
 	const { itemIds } = rooms[roomId];
@@ -193,4 +274,4 @@ const getPrevItemId = (roomId, itemId) => {
 	return 0;
 };
 
-export { getItems, getItem, getNextItemId, getPrevItemId };
+export { getRooms, getItems, getItem, getNextItemId, getPrevItemId };
