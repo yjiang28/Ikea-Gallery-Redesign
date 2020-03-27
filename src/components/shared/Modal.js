@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import PropTypes from "prop-types";
 import { Button, Carousel, CarouselItem, Input } from "./";
 import { getItem } from "../../scripts/data";
+import { ADD_TO_CART, ADD_TO_FAV } from "../../reducers";
 
 const useStyles = createUseStyles({
 	modal: {

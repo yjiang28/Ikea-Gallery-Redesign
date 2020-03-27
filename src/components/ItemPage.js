@@ -10,6 +10,7 @@ import {
   Modal
 } from "./shared";
 import { getItem, getNextItemId, getPrevItemId } from "../scripts/data";
+import { SET_ITEM, SET_PAGE } from "../reducers/";
 
 const useStyles = createUseStyles({
   modal: {
@@ -188,19 +189,19 @@ const ItemPage = ({ store, cart, fav, slide, id, ...props }) => {
   const back = e => {
     animateModalOut(modalRef);
     animateItemPageOut(textRef, actionRef, () => {
-      store.dispatch({ type: "SET_PAGE", page: 1 });
+      store.dispatch({ type: SET_PAGE, page: 1 });
     });
   };
 
   const nextModal = e => {
     animateModalOut(modalRef, () => {
-      store.dispatch({ type: "SET_ITEM", item: nextItem });
+      store.dispatch({ type: SET_ITEM, item: nextItem });
     });
   };
 
   const prevModal = e => {
     animateModalOut(modalRef, () =>
-      store.dispatch({ type: "SET_ITEM", item: prevItem })
+      store.dispatch({ type: SET_ITEM, item: prevItem })
     );
   };
 

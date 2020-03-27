@@ -53,4 +53,4 @@ const reducers = (state = initialState, action) => {
 };
 
 export default reducers;
-export { ADD_TO_CART, ADD_TO_FAV, SET_PAGE, SET_ITEM };
+export { ADD_TO_CART, ADD_TO_FAV, SET_PAGE, SET_SLIDE, SET_ITEM };

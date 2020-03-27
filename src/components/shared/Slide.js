@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
 import gsap from "gsap";
 import SlideButton from "./SlideButton";
+import { SET_PAGE, SET_SLIDE } from "../../reducers";
 
 const useStyles = createUseStyles({
   slideContainer: {
@@ -160,7 +161,7 @@ const Slide = ({ children, store, slide, ...props }) => {
       (slide === 0 && direction === -1)
     )
       return;
-    store.dispatch({ type: "SET_SLIDE", slide: slide + direction });
+    store.dispatch({ type: SET_SLIDE, slide: slide + direction });
   };
 
   const viewItems = () => {
@@ -171,8 +172,8 @@ const Slide = ({ children, store, slide, ...props }) => {
       descriptionRef,
       actionRef,
       () => {
-        store.dispatch({ type: "SET_SLIDE", slide });
-        store.dispatch({ type: "SET_PAGE", page: 1 });
+        store.dispatch({ type: SET_SLIDE, slide });
+        store.dispatch({ type: SET_PAGE, page: 1 });
       }
     );
   };

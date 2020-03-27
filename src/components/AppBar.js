@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
 import { Button, Badge, FavMenu, CartMenu } from "./shared";
 import { HeartIcon, CartIcon, MenuIcon } from "./shared/Icons";
+import { SET_PAGE, SET_SLIDE } from "../reducers/";
 
 const useStyles = createUseStyles({
   row: {
@@ -95,8 +96,8 @@ const AppBar = forwardRef(({ cart, fav, store, ...props }, ref) => {
   );
 
   const onClickBrand = e => {
-    store.dispatch({ type: "SET_PAGE", page: 0 });
-    store.dispatch({ type: "SET_SLIDE", slide: 0 });
+    store.dispatch({ type: SET_PAGE, page: 0 });
+    store.dispatch({ type: SET_SLIDE, slide: 0 });
   };
 
   const toggleCartMenu = e => {

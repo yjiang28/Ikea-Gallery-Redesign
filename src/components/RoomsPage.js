@@ -9,6 +9,7 @@ const RoomsPage = ({ store, slide }) => {
 		<Slide store={store} slide={slide}>
 			{rooms.map(room => (
 				<SlideItem
+					key={room.id}
 					src={room.src}
 					name={room.name}
 					description={room.description}

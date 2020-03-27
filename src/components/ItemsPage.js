@@ -1,9 +1,11 @@
 import React, { Fragment, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
+import { gsap, Draggable } from "gsap/all";
 import { Grid, GridItem, Container } from "./shared";
 import { getItems } from "../scripts/data";
-import { gsap, Draggable } from "gsap/all";
+import { SET_ITEM, SET_PAGE } from "../reducers/";
+
 gsap.registerPlugin(Draggable);
 
 const useStyles = createUseStyles({
@@ -89,14 +91,14 @@ const ItemsPage = ({ slide, cart, fav, store }) => {
 	const openModal = e => {
 		const { id } = e.target;
 		animateItemsPageOut(gridRef, textRef, () => {
-			store.dispatch({ type: "SET_ITEM", item: id });
-			store.dispatch({ type: "SET_PAGE", page: 2 });
+			store.dispatch({ type: SET_ITEM, item: id });
+			store.dispatch({ type: SET_PAGE, page: 2 });
 		});
 	};
 
 	const back = e => {
 		animateItemsPageOut(gridRef, textRef, () => {
-			store.dispatch({ type: "SET_PAGE", page: 0 });
+			store.dispatch({ type: SET_PAGE, page: 0 });
 		});
 	};
 
