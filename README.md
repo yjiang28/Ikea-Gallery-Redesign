@@ -16,4 +16,4 @@ To run the code on your machine:
 2. Navigate to the cloned repo
 3. `yarn` to install the dependecies
 4. `yarn start`
-5. View it on [localhose:3000](http://localhost:3000/) from your browser
+5. View it on [localhost:3000](http://localhost:3000/) from your browser
