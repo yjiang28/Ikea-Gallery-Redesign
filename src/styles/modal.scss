@@ -1,0 +1,70 @@
+@import "variables";
+
+.modal {
+  position: relative;
+  width: 700px;
+  max-width: 100vw;
+  height: auto;
+  margin: 5rem auto auto auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 0 4px #aaaaaa;
+  background: white;
+
+  @media (max-width: $sm) {
+    margin: 0;
+    box-shadow: none;
+    flex-direction: column;
+  }
+
+  & > button.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  & .modal-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-right: 2rem;
+    padding-bottom: 1.8rem;
+    margin-left: 2rem;
+
+    & > * {
+      margin-top: 2rem;
+    }
+
+    & > .quantity {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > input {
+        padding: 0.5rem;
+      }
+    }
+
+    & button {
+      padding: 0.5rem;
+
+      &.cart {
+        position: relative;
+        background: $green;
+        color: white;
+        opacity: 0.8;
+        transition: 1s ease-out;
+
+        &:active {
+          opacity: 1;
+        }
+      }
+
+      &.fav {
+        background: #f0f0f0;
+      }
+    }
+  }
+}

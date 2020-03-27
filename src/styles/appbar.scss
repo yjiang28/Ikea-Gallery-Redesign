@@ -1,0 +1,43 @@
+@import "variables";
+
+.appbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  padding: 1rem 5rem;
+  justify-content: space-between;
+  z-index: 1000;
+  color: #222;
+
+  & .brand {
+    font-size: 2rem;
+  }
+
+  & .tab {
+    background: transparent;
+    margin-left: 2rem;
+
+    & svg {
+      color: #222;
+    }
+  }
+
+  @media (max-width: $sm) {
+    padding: 1rem;
+    background: white;
+    opacity: 0.9;
+    &,
+    & * {
+      color: $primary;
+    }
+
+    & .brand {
+      font-size: 1.5rem;
+    }
+
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

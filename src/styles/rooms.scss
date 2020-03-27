@@ -1,0 +1,42 @@
+@import "variables";
+
+.rooms {
+	& .carousel-btn {
+		position: absolute;
+		top: 52.5%;
+		font-size: 3rem;
+		background: transparent;
+
+		& svg {
+			color: white;
+		}
+
+		&.left-btn {
+			left: 350px;
+		}
+
+		&.right-btn {
+			left: 425px;
+		}
+	}
+
+	@media (max-width: $md) {
+		& .carousel-btn {
+			&.left-btn {
+				left: 50%;
+				transform: translateX(-140px);
+			}
+
+			&.right-btn {
+				left: 50%;
+				transform: translateX(-65px);
+			}
+		}
+	}
+
+	@keyframes moveCart {
+		100% {
+			transform: translateX(10px);
+		}
+	}
+}
