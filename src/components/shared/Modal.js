@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { createUseStyles } from "react-jss";
 import PropTypes from "prop-types";
 import { Button, Carousel, CarouselItem, Input } from "./";
@@ -75,7 +75,7 @@ const Modal = forwardRef(({ id, store, fav }, ref) => {
 		e.preventDefault();
 		const formData = new FormData(e.target);
 		store.dispatch({
-			type: "ADD_TO_CART",
+			type: ADD_TO_CART,
 			item: {
 				id,
 				quantity: formData.get("quantity"),
@@ -89,7 +89,7 @@ const Modal = forwardRef(({ id, store, fav }, ref) => {
 
 	const addToFav = e => {
 		store.dispatch({
-			type: "ADD_TO_FAV",
+			type: ADD_TO_FAV,
 			item: {
 				id,
 				avatar: images[0],

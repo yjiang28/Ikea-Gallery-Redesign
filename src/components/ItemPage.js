@@ -1,15 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 import { gsap } from "gsap/all";
-import {
-  Button,
-  Carousel,
-  CarouselItem,
-  Container,
-  Input,
-  Modal
-} from "./shared";
-import { getItem, getNextItemId, getPrevItemId } from "../scripts/data";
+import { Button, Container, Modal } from "./shared";
+import { getNextItemId, getPrevItemId } from "../scripts/data";
 import { SET_ITEM, SET_PAGE } from "../reducers/";
 
 const useStyles = createUseStyles({
@@ -166,8 +159,6 @@ const animateModalOut = (modalRef, callback) => {
 
 const ItemPage = ({ store, cart, fav, slide, id, ...props }) => {
   const classes = useStyles();
-  const item = getItem(id);
-  const { images, brand, name, description, price } = item;
 
   const [nextItem, setNextItem] = useState();
   const [prevItem, setPrevItem] = useState();

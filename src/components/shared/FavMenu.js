@@ -1,5 +1,4 @@
 import React, { Fragment, forwardRef } from "react";
-import { createUseStyles } from "react-jss";
 import PropTypes from "prop-types";
 import { AnchorMenu, Divider, FavItem, MenuItem } from "./";
 

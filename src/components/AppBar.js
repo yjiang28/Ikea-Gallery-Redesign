@@ -1,10 +1,4 @@
-import React, {
-  Fragment,
-  useState,
-  useEffect,
-  useRef,
-  forwardRef
-} from "react";
+import React, { useState, useEffect, useRef, forwardRef } from "react";
 import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
 import { Button, Badge, FavMenu, CartMenu } from "./shared";
@@ -62,7 +56,7 @@ const useStyles = createUseStyles({
     }
   },
   appbar: {
-    position: "fixed",
+    position: "absolute",
     top: 0,
     left: 0,
     width: "100%",
