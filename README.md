@@ -2,9 +2,13 @@
 
 Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Tech: React, Redux, JSS, prop-types, GSAP
+Tech: React, Redux, JSS, prop-types, GSAP.
+
+Focus on delivering smooth user experience and responsive design.
 
 View it live on CodePen: [click here](https://codepen.io/Yuechun/live/dyoQmPp).
+
+![preview](https://media.giphy.com/media/XZsd2da6kDnMx3GCkb/giphy.gif)
 
 To run the code on your machine:
 
