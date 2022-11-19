@@ -12,7 +12,7 @@
     "react-dom": "^16.13.0",
     "react-gsap": "^1.2.0",
     "react-jss": "^10.1.1",
-    "react-scripts": "3.4.0",
+    "react-scripts": "5.0.1",
     "redux": "^4.0.5"
   },
   "scripts": {
